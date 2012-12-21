@@ -24,6 +24,7 @@ LSNS will be a "convention" (not a standard -- that's too heavyweight), a set of
 #They must not be excessively long, because key length counts against you in the total amount of localStorage your domain can use.
 #They should not include https:// or http://, primarily because this adds to key length and provides no really useful information.
 #They should be fairly predictable -- it should be possible to guess what a script's key is or figure out what script a particular key goes with.
+#They should require no central authority to acquire -- it should be possible to just create one that follows the rules.
 
 With those requirements in mind, the rules for LSNS will be:
 
