@@ -3,7 +3,7 @@ LSNS: A localStorage key namespacing convention
 
 This repository has a single purpose: to iron out a convention for HTML5 localStorage key namespacing.  All contributors are welcome to either submit problems with the current proposed rules as issues, or to fork and request-for-pull any changes.
 
-This idea began it's public life here: http://joewlarson.com/blog/2012/12/02/we-need-a-standard-for-namespacing-localstorage-keys/
+This idea began its public life here: http://joewlarson.com/blog/2012/12/02/we-need-a-standard-for-namespacing-localstorage-keys/
 
 The Problem
 -----------
