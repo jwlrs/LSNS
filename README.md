@@ -21,15 +21,15 @@ The Solution
 ------------
 LSNS will be a "convention" (not a standard -- that's too heavyweight), a set of rules which JavaScript libraries can employ to use localStorage in a fashion that won't collide with other localStorage usage.  The rules must meet these requirements:
 
-#They must not be excessively long, because key length counts against you in the total amount of localStorage your domain can use.
-#They should not include https:// or http://, primarily because this adds to key length and provides no really useful information.
-#They should be fairly predictable -- it should be possible to guess what a script's key is or figure out what script a particular key goes with.
-#They should require no central authority to acquire -- it should be possible to just create one that follows the rules.
+ - They must not be excessively long, because key length counts against you in the total amount of localStorage your domain can use.
+ - They should not include https:// or http://, primarily because this adds to key length and provides no really useful information.
+ - They should be fairly predictable -- it should be possible to guess what a script's key is or figure out what script a particular key goes with.
+ - They should require no central authority to acquire -- it should be possible to just create one that follows the rules.
 
 With those requirements in mind, the rules for LSNS will be:
 
-#For application code, localStorage keys should be prefixed with the root subpath within the website that represents the application, followed by a colon. For example, "/stocks:", "/admin:", or just ":" if this is code for the whole site.
-#For libraries, localStorage keys should be prefixed with the subdomain of the script’s primary "home" on the web, followed by a colon. For example, "github.com/theAuthor/theScript.js:" or "scriptName.somesite.com:".
-#All libraries should supply a documented means for a different namespace to be used. For example, "SomeScript.setLsNamespace(…)" or "new SomeScript({ lsns: ‘…’})".
-#Libraries should avoid using localStorage.clear().
-#Libraries should note prominantly that they "implement the LSNS convention using a prefix of ____".
+ - For application code, localStorage keys should be prefixed with the root subpath within the website that represents the application, followed by a colon. For example, "/stocks:", "/admin:", or just ":" if this is code for the whole site.
+ - For libraries, localStorage keys should be prefixed with the subdomain of the script’s primary "home" on the web, followed by a colon. For example, "github.com/theAuthor/theScript.js:" or "scriptName.somesite.com:".
+ - All libraries should supply a documented means for a different namespace to be used. For example, "SomeScript.setLsNamespace(…)" or "new SomeScript({ lsns: ‘…’})".
+ - Libraries should avoid using localStorage.clear().
+ - Libraries should note prominantly that they "implement the LSNS convention using a prefix of ____".
